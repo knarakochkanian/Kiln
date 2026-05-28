@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply box-border;
+}
+
+html,
+body {
+  @apply kiln-paper text-kiln-ink font-sans;
+}
+
+body {
+  @apply antialiased;
+}
+
+a {
+  @apply transition-colors;
+}
+
+button {
+  @apply transition-all duration-200;
+}
+
+input,
+textarea,
+select {
+  @apply outline-none;
+}
+
+.kiln-paper {
+  background-color: #f8f1e7;
+  background-image:
+    radial-gradient(circle at 20% 10%, rgba(185, 106, 80, 0.06) 0 1px, transparent 1px),
+    radial-gradient(circle at 80% 40%, rgba(46, 42, 39, 0.05) 0 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.35), transparent 18%, transparent 82%, rgba(255, 255, 255, 0.28));
+  background-size: 18px 18px, 23px 23px, 100% 100%;
+}
+
+.decor-tile {
+  @apply absolute h-16 w-16 border-2 border-kiln-ink bg-cover bg-center lg:h-20 lg:w-20;
+}
+
+.decor-leaf {
+  @apply absolute h-40 w-12;
+}
+
+.decor-leaf::before,
+.decor-leaf::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 3px;
+  height: 100%;
+  background: #2e6f63;
+  transform: translateX(-50%);
+}
+
+.decor-leaf::after {
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(ellipse at 25% 15%, #2e6f63 0 12%, transparent 13%),
+    radial-gradient(ellipse at 75% 25%, #2e6f63 0 12%, transparent 13%),
+    radial-gradient(ellipse at 25% 40%, #2e6f63 0 12%, transparent 13%),
+    radial-gradient(ellipse at 75% 52%, #2e6f63 0 12%, transparent 13%),
+    radial-gradient(ellipse at 25% 68%, #2e6f63 0 12%, transparent 13%),
+    radial-gradient(ellipse at 75% 82%, #2e6f63 0 12%, transparent 13%);
+  transform: none;
+}
