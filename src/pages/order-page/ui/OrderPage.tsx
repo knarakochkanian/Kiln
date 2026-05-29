@@ -117,7 +117,7 @@ const TitleHeader = () => {
     <section className="relative z-10 mb-8 text-center lg:mb-10">
       <div className="flex items-center justify-center gap-5">
         <span className="hidden h-20 w-16 border-2 border-kiln-ink bg-[#5D9C92] lg:block" />
-        <h1 className="font-display text-[34px] font-black uppercase leading-none tracking-normal text-kiln-ink sm:text-[58px] lg:text-[44px] xl:text-[56px]">
+        <h1 className="font-display font-black uppercase leading-none tracking-normal text-kiln-ink sm:text-[38px] lg:text-[44px] xl:text-[56px]">
           Ceramic Tile Order Form
         </h1>
         <span className="hidden h-20 w-16 rounded-t-[32px] border-2 border-kiln-ink bg-kiln-clay lg:block" />
@@ -125,7 +125,7 @@ const TitleHeader = () => {
 
       <div className="mt-3 flex items-center justify-center gap-3 sm:gap-5">
         <TileStrip count={3} offset={0} />
-        <h2 className="font-display text-[23px] font-black uppercase leading-none text-kiln-ink sm:text-[34px] lg:text-[26px] xl:text-[34px]">
+        <h2 className="font-display  font-black uppercase leading-none text-kiln-ink sm:text-[24px] lg:text-[26px] xl:text-[34px]">
           The Artisan Kiln
         </h2>
         <TileStrip count={3} offset={1} />
@@ -163,11 +163,11 @@ const DecorativeFrame = () => {
     <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
       <span className="decor-tile left-3 top-16 bg-tile-forest-fern" />
       <span className="decor-tile right-3 top-24 bg-tile-yellow-star" />
-      <span className="decor-tile left-3 bottom-5 bg-tile-ocean-wave" />
-      <span className="decor-tile right-8 bottom-6 bg-tile-terracotta-dot" />
+      <span className="decor-tile left-3 bottom-5 hidden bg-tile-ocean-wave lg:block" />
+      <span className="decor-tile right-8 bottom-6 hidden bg-tile-terracotta-dot lg:block" />
       <span className="decor-leaf right-8 top-36 hidden lg:block" />
-      <span className="decor-leaf left-28 bottom-4 rotate-90" />
-      <span className="decor-leaf right-28 bottom-4 -rotate-90" />
+      <span className="decor-leaf left-28 bottom-4 hidden rotate-90 lg:block" />
+      <span className="decor-leaf right-28 bottom-4 hidden -rotate-90 lg:block" />
     </div>
   );
 };
